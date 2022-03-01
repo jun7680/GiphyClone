@@ -60,5 +60,4 @@ struct PreviewGIF: Codable {
     let width: String
     let size: String
     let url: String
-    
 }

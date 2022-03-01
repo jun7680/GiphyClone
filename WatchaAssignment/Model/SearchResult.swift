@@ -9,4 +9,5 @@ import Foundation
 
 struct SearchResult: Codable {
     let data: [DataDTO]
+    let pagination: PaginationDTO
 }
