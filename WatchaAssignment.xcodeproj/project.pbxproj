@@ -28,6 +28,8 @@
 		665C4E6A27CD15670014C9BC /* UIimage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665C4E6927CD15670014C9BC /* UIimage+.swift */; };
 		665C4E6C27CDC7AA0014C9BC /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665C4E6B27CDC7AA0014C9BC /* SearchResultCell.swift */; };
 		665C4E7127CE1EAA0014C9BC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665C4E7027CE1EAA0014C9BC /* DetailViewController.swift */; };
+		665C4E7427CE42250014C9BC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 665C4E7227CE42250014C9BC /* Model.xcdatamodeld */; };
+		665C4E7627CE55EC0014C9BC /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665C4E7527CE55EC0014C9BC /* String+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		665C4E6927CD15670014C9BC /* UIimage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIimage+.swift"; sourceTree = "<group>"; };
 		665C4E6B27CDC7AA0014C9BC /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		665C4E7027CE1EAA0014C9BC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		665C4E7327CE42250014C9BC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		665C4E7527CE55EC0014C9BC /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 				665C4E2127CC5B0A0014C9BC /* Assets.xcassets */,
 				665C4E2327CC5B0A0014C9BC /* LaunchScreen.storyboard */,
 				665C4E2627CC5B0A0014C9BC /* Info.plist */,
+				665C4E7227CE42250014C9BC /* Model.xcdatamodeld */,
 			);
 			path = WatchaAssignment;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				665C4E6927CD15670014C9BC /* UIimage+.swift */,
+				665C4E7527CE55EC0014C9BC /* String+.swift */,
 			);
 			path = Extenstion;
 			sourceTree = "<group>";
@@ -381,8 +387,10 @@
 				665C4E5627CC87340014C9BC /* SearchAPI.swift in Sources */,
 				665C4E5127CC7B7A0014C9BC /* EndPoint.swift in Sources */,
 				665C4E6127CCBD990014C9BC /* SearchManager.swift in Sources */,
+				665C4E7427CE42250014C9BC /* Model.xcdatamodeld in Sources */,
 				665C4E1927CC5B090014C9BC /* AppDelegate.swift in Sources */,
 				665C4E7127CE1EAA0014C9BC /* DetailViewController.swift in Sources */,
+				665C4E7627CE55EC0014C9BC /* String+.swift in Sources */,
 				665C4E6A27CD15670014C9BC /* UIimage+.swift in Sources */,
 				665C4E1B27CC5B090014C9BC /* SceneDelegate.swift in Sources */,
 			);
@@ -739,6 +747,19 @@
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		665C4E7227CE42250014C9BC /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				665C4E7327CE42250014C9BC /* Model.xcdatamodel */,
+			);
+			currentVersion = 665C4E7327CE42250014C9BC /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 665C4E0D27CC5B080014C9BC /* Project object */;
 }

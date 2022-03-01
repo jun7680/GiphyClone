@@ -37,15 +37,12 @@ class SearchViewModel {
             guard let self = self else { return }
             self.manager.search(word, offset: self.offset, limit: self.limit)
                 .sink {  result in
-                   
                     switch result {
                     case .success(let value):
                         self.searchResultData.append(contentsOf: value.data)
                         if self.offset < value.pagination.totalCount {
                             self.offset += value.pagination.count
                         }
-                        
-                        print("value", self.offset)
                         
                         self.reloadDataSubject.send()
                     case .failure(let error):

@@ -115,8 +115,9 @@ extension ViewController: UICollectionViewDataSource,
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width
-        let height = collectionView.bounds.height
         collectionViewLayout.invalidateLayout()
+        let height = viewModel.searchReslt[indexPath.row].images.previewGif.height.stringToFloat
+        
         return CGSize(width: width / 2, height: height)
     }
     
@@ -141,6 +142,8 @@ extension ViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if searchResultCollectionView.contentOffset.y >= (self.searchResultCollectionView.contentSize.height - self.searchResultCollectionView.bounds.size.height) - 100 {
             print("aa")
+            let word = searchBar.text ?? String()
+            viewModel.search(word: word)
         }
     }
 }
