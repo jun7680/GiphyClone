@@ -32,7 +32,9 @@ class SearchResultCell: UICollectionViewCell {
     }
     
     override func prepareForReuse() {
-        super.prepareForReuse()        
+        super.prepareForReuse()
+        print("sksksksksks")
+        imageView.image = nil
     }
     
     func configure(url: String) {

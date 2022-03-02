@@ -151,6 +151,8 @@ extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let word = searchBar.text ?? String()
         activityIndicator.startAnimating()
+        searchResultCollectionView.layoutIfNeeded()
+        searchResultCollectionView.contentSize.height = 0
         viewModel.search(word: word)
     }
 }
