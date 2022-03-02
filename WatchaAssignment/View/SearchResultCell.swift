@@ -33,7 +33,6 @@ class SearchResultCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        print("sksksksksks")
         imageView.image = nil
     }
     
