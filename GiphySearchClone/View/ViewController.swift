@@ -153,6 +153,7 @@ extension ViewController: UISearchBarDelegate {
         activityIndicator.startAnimating()
         searchResultCollectionView.layoutIfNeeded()
         searchResultCollectionView.contentSize.height = 0
+        searchResultCollectionView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
         viewModel.search(word: word)
     }
 }
