@@ -32,6 +32,7 @@
 		665C4E7127CE1EAA0014C9BC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665C4E7027CE1EAA0014C9BC /* DetailViewController.swift */; };
 		665C4E7427CE42250014C9BC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 665C4E7227CE42250014C9BC /* Model.xcdatamodeld */; };
 		665C4E7627CE55EC0014C9BC /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665C4E7527CE55EC0014C9BC /* String+.swift */; };
+		6697169D27CF933E00F4CBF7 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6697169C27CF933E00F4CBF7 /* ImageCacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		665C4E7027CE1EAA0014C9BC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		665C4E7327CE42250014C9BC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		665C4E7527CE55EC0014C9BC /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		6697169C27CF933E00F4CBF7 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				665C4E5E27CCBD170014C9BC /* OperateManager.swift */,
+				6697169C27CF933E00F4CBF7 /* ImageCacheManager.swift */,
 				665C4E6027CCBD990014C9BC /* SearchManager.swift */,
 			);
 			path = Manager;
@@ -402,6 +405,7 @@
 				665C4E5627CC87340014C9BC /* SearchAPI.swift in Sources */,
 				665C4E5127CC7B7A0014C9BC /* EndPoint.swift in Sources */,
 				665C4E6127CCBD990014C9BC /* SearchManager.swift in Sources */,
+				6697169D27CF933E00F4CBF7 /* ImageCacheManager.swift in Sources */,
 				665C4E7427CE42250014C9BC /* Model.xcdatamodeld in Sources */,
 				665C4E1927CC5B090014C9BC /* AppDelegate.swift in Sources */,
 				665C4E7127CE1EAA0014C9BC /* DetailViewController.swift in Sources */,

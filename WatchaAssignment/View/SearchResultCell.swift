@@ -36,11 +36,17 @@ class SearchResultCell: UICollectionViewCell {
     }
     
     func configure(url: String) {
+        let key = NSString(string: url)
+        
+        if let cacheImage = ImageCacheManager.shared.object(forKey: key) {
+            imageView.image = cacheImage
+            return
+        }
         DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: URL(string: url)!) {
-                DispatchQueue.main.async {
-                    self?.imageView.image = UIImage(data: data)
-                }
+            let image = UIImage.gifImageFromURL(url)
+            DispatchQueue.main.async {
+                ImageCacheManager.shared.setObject(image, forKey: key)
+                self?.imageView.image = image
             }
         }
     }

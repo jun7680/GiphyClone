@@ -26,7 +26,6 @@ class SearchManager {
             .map { result -> Result<SearchResult, Error> in
                 switch result {
                 case .success(let value):
-                    print("🤭", value.data)
                     return .success(value)
                 case .failure(let error):
                     return .failure(error)

@@ -32,14 +32,10 @@ class SearchResultLayout: UICollectionViewFlowLayout {
     
     override func prepare() {
         super.prepare()
-        guard cache.isEmpty == true, let collectionView = collectionView else {
-            print("guard")
-            return
-            
-        }
+        cache.removeAll()
+        guard let collectionView = collectionView else { return }
         
         let columnWidth = contentWidth / CGFloat(numberOfColumns)
-        print("columnWidth", columnWidth)
         var xOffset: [CGFloat] = []
         for column in 0..<numberOfColumns {
             xOffset.append(CGFloat(column) * columnWidth)
@@ -63,7 +59,6 @@ class SearchResultLayout: UICollectionViewFlowLayout {
             attributes.frame = insetFrame
             cache.append(attributes)
             contentHeight = max(contentHeight, frame.maxY)
-            print("😛 content ", contentHeight)
             yOffset[column] = yOffset[column] + height
             column = column < (numberOfColumns - 1) ? (column + 1) : 0
         }

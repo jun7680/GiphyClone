@@ -34,8 +34,11 @@ class SearchViewModel {
     }
     
     private let reloadDataSubject = PassthroughSubject<Void, Never>()
+    
+    // search button으로 호출
     func search(word: String) {
         self.offset = 0
+        searchResultData.removeAll()
         DispatchQueue.global().async {[weak self] in
             guard let self = self else { return }
             self.manager.search(word, offset: self.offset, limit: self.limit)
@@ -46,6 +49,7 @@ class SearchViewModel {
                         self.totalCount = value.pagination.totalCount
                         self.offset = value.pagination.count
                         self.reloadDataSubject.send()
+                        
                     case .failure(let error):
                         print(error)
                     }
@@ -53,8 +57,8 @@ class SearchViewModel {
         }
         
     }
+    // pagination
     func paginationSearch(word: String) {
-        print("🤭 pagination", offset, totalCount)
         guard offset < totalCount, !isLoading else { return }
         isLoading = true
         DispatchQueue.global().async {[weak self] in
@@ -64,7 +68,6 @@ class SearchViewModel {
                     switch result {
                     case .success(let value):
                         self.searchResultData.append(contentsOf: value.data)
-                        print("😛11", self.searchResultData.count)
                         self.offset += value.pagination.count
                         self.isLoading = false
                         self.reloadDataSubject.send()

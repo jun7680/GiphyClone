@@ -29,7 +29,6 @@ class DetailViewController: UIViewController {
     init(data: DataDTO) {
         self.detailData = data
         super.init(nibName: nil, bundle: nil)
-        print(detailData.images.fixedWidth.height)
     }
     
     required init?(coder: NSCoder) {
@@ -108,8 +107,6 @@ class DetailViewController: UIViewController {
                 let id = saveValue.id ?? String()
                 if id == detailData.id {
                     checkFavorite(saveValue.favorite)
-                } else {
-                    checkFavorite(false)
                 }
             }
         } catch {
