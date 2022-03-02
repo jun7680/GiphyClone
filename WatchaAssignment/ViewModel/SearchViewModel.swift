@@ -14,6 +14,8 @@ class SearchViewModel {
     
     private var offset = 0
     private var limit = 25
+    private var totalCount = 0
+    var isLoading = false
     
     // collectionview datasource
     private var searchResultData = [DataDTO]()
@@ -33,6 +35,28 @@ class SearchViewModel {
     
     private let reloadDataSubject = PassthroughSubject<Void, Never>()
     func search(word: String) {
+        self.offset = 0
+        DispatchQueue.global().async {[weak self] in
+            guard let self = self else { return }
+            self.manager.search(word, offset: self.offset, limit: self.limit)
+                .sink {  result in
+                    switch result {
+                    case .success(let value):
+                        self.searchResultData = value.data
+                        self.totalCount = value.pagination.totalCount
+                        self.offset = value.pagination.count
+                        self.reloadDataSubject.send()
+                    case .failure(let error):
+                        print(error)
+                    }
+                }.store(in: &self.cancellabel)
+        }
+        
+    }
+    func paginationSearch(word: String) {
+        print("🤭 pagination", offset, totalCount)
+        guard offset < totalCount, !isLoading else { return }
+        isLoading = true
         DispatchQueue.global().async {[weak self] in
             guard let self = self else { return }
             self.manager.search(word, offset: self.offset, limit: self.limit)
@@ -40,11 +64,11 @@ class SearchViewModel {
                     switch result {
                     case .success(let value):
                         self.searchResultData.append(contentsOf: value.data)
-                        if self.offset < value.pagination.totalCount {
-                            self.offset += value.pagination.count
-                        }
-                        
+                        print("😛11", self.searchResultData.count)
+                        self.offset += value.pagination.count
+                        self.isLoading = false
                         self.reloadDataSubject.send()
+                        
                     case .failure(let error):
                         print(error)
                     }

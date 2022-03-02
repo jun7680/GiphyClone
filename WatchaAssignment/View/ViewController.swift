@@ -25,8 +25,10 @@ class ViewController: UIViewController {
     }()
     
     lazy var searchResultCollectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
+        let layout = SearchResultLayout()
+        layout.delegate = self
         layout.scrollDirection = .vertical
+        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -52,6 +54,11 @@ class ViewController: UIViewController {
         self.title = "Search"
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        searchResultCollectionView.collectionViewLayout.invalidateLayout()
+    }
+    
     private func setViews() {
         view.addSubview(searchBar)
         view.addSubview(searchResultCollectionView)
@@ -75,17 +82,20 @@ class ViewController: UIViewController {
     private func setBinding() {
         viewModel.reloadData
             .sink { [weak self] _ in
-                self?.searchResultCollectionView.reloadData()
+                DispatchQueue.main.async {
+                    self?.searchResultCollectionView.reloadData()
+                    
+                    self?.viewModel.isLoading = false
+                }
             }.store(in: &cancelladble)
-    }
+    }    
 }
 
 extension ViewController: UICollectionViewDataSource,
                           UICollectionViewDelegate {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("😛", viewModel.numberOfRows)
         return viewModel.numberOfRows
     }
     
@@ -96,8 +106,9 @@ extension ViewController: UICollectionViewDataSource,
             for: indexPath
         ) as? SearchResultCell
         else { return .init() }
+        print("😛 cellforItemAt")
         if viewModel.numberOfRows != 0 {
-            let url = viewModel.searchReslt[indexPath.row].images.previewGif.url
+            let url = viewModel.searchReslt[indexPath.row].images.fixedWidth.url
             cell.configure(url: url)            
         }
         return cell
@@ -110,26 +121,32 @@ extension ViewController: UICollectionViewDataSource,
         self.navigationController?.pushViewController(DetailViewController(data: data), animated: true)
     }
     
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.searchReslt.count - 3 {
+            let word = searchBar.text ?? String()
+            viewModel.paginationSearch(word: word)
+        }
+    }
+    
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width
-        collectionViewLayout.invalidateLayout()
-        let height = viewModel.searchReslt[indexPath.row].images.previewGif.height.stringToFloat
-        
-        return CGSize(width: width / 2, height: height)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        print("sizeForItemAt")
+        let image = viewModel.searchReslt[indexPath.row].images.fixedWidth
+        let height = HeightCalculate.calculateImageHeight(image: image, width: UIScreen.main.bounds.width / 2)
+        return CGSize(width: collectionView.frame.width / 2, height: height)
     }
 }
 
+extension ViewController: SearchResultLayoutDelegate {
+    func collectionView(_ collectionView: UICollectionView, heightForImageAtIndexPath indexPath: IndexPath, cellWidth: CGFloat) -> CGFloat {
+        print("😛 result delegate")
+        let image = viewModel.searchReslt[indexPath.row].images.fixedWidth
+        let height = HeightCalculate.calculateImageHeight(image: image, width: UIScreen.main.bounds.width / 2)
+        return height
+    }
+}
 extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let word = searchBar.text ?? String()
@@ -138,12 +155,13 @@ extension ViewController: UISearchBarDelegate {
 }
 
 // pagination
-extension ViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if searchResultCollectionView.contentOffset.y >= (self.searchResultCollectionView.contentSize.height - self.searchResultCollectionView.bounds.size.height) - 100 {
-            print("aa")
-            let word = searchBar.text ?? String()
-            viewModel.search(word: word)
-        }
-    }
-}
+//extension ViewController: UIScrollViewDelegate {
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print(searchResultCollectionView.contentOffset.y >= (self.searchResultCollectionView.contentSize.height - self.searchResultCollectionView.bounds.size.height))
+//
+//        if searchResultCollectionView.contentOffset.y >= (self.searchResultCollectionView.contentSize.height - self.searchResultCollectionView.bounds.size.height) - 100 {
+//            let word = searchBar.text ?? String()
+//            viewModel.paginationSearch(word: word)
+//        }
+//    }
+//}

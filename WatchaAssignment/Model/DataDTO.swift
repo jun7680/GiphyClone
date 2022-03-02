@@ -49,10 +49,20 @@ struct DataDTO: Codable {
 
 struct ImageDTO: Codable {
     let previewGif: PreviewGIF
+    let fixedWidth: FixedWidth
     
     enum CodingKeys: String, CodingKey {
         case previewGif = "preview_gif"
+        case fixedWidth = "fixed_width"
     }
+}
+
+struct FixedWidth: Codable {
+    let height: String
+    let width: String
+    let size: String
+    let url: String
+    
 }
 
 struct PreviewGIF: Codable {

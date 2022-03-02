@@ -29,12 +29,11 @@ class DetailViewController: UIViewController {
     init(data: DataDTO) {
         self.detailData = data
         super.init(nibName: nil, bundle: nil)
-        print("init")
+        print(detailData.images.fixedWidth.height)
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-        
+        fatalError("init(coder:) has not been implemented")        
     }
     
     override func viewDidAppear(_ animated: Bool) {

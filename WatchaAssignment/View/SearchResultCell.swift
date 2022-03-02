@@ -12,22 +12,27 @@ class SearchResultCell: UICollectionViewCell {
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.translatesAutoresizingMaskIntoConstraints = false        
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setup()
+        
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        setup()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()        
     }
     
     func configure(url: String) {
@@ -47,10 +52,6 @@ class SearchResultCell: UICollectionViewCell {
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
-        
     }
 }
-
-extension SearchResultCell {
     
-}
