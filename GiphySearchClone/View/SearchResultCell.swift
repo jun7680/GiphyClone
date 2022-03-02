@@ -13,7 +13,6 @@ class SearchResultCell: UICollectionViewCell {
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false        
-        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     

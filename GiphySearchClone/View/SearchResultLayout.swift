@@ -50,7 +50,6 @@ class SearchResultLayout: UICollectionViewFlowLayout {
                 collectionView,
                 heightForImageAtIndexPath: indexPath,
                 cellWidth: columnWidth) ?? 180
-            
             let height = cellPadding * 2 + imageHeight
             let frame = CGRect(x: xOffset[column], y: yOffset[column], width: columnWidth, height: height)
             let insetFrame = frame.insetBy(dx: cellPadding, dy: cellPadding)

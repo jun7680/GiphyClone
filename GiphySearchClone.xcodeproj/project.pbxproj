@@ -55,16 +55,16 @@
 /* Begin PBXFileReference section */
 		57D215F627CEF074007C1A03 /* SearchResultLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultLayout.swift; sourceTree = "<group>"; };
 		57D215F927CF1048007C1A03 /* HeightCalculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightCalculate.swift; sourceTree = "<group>"; };
-		665C4E1527CC5B090014C9BC /* WatchaAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchaAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		665C4E1527CC5B090014C9BC /* GiphySearchClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiphySearchClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		665C4E1827CC5B090014C9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		665C4E1A27CC5B090014C9BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		665C4E1C27CC5B090014C9BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		665C4E2127CC5B0A0014C9BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		665C4E2427CC5B0A0014C9BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		665C4E2627CC5B0A0014C9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		665C4E2B27CC5B0A0014C9BC /* WatchaAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchaAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		665C4E2B27CC5B0A0014C9BC /* GiphySearchCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiphySearchCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		665C4E2F27CC5B0A0014C9BC /* WatchaAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchaAssignmentTests.swift; sourceTree = "<group>"; };
-		665C4E3527CC5B0A0014C9BC /* WatchaAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchaAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		665C4E3527CC5B0A0014C9BC /* GiphySearchCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiphySearchCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		665C4E3927CC5B0A0014C9BC /* WatchaAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchaAssignmentUITests.swift; sourceTree = "<group>"; };
 		665C4E3B27CC5B0A0014C9BC /* WatchaAssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchaAssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		665C4E4E27CC7ADC0014C9BC /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -121,9 +121,9 @@
 		665C4E0C27CC5B080014C9BC = {
 			isa = PBXGroup;
 			children = (
-				665C4E1727CC5B090014C9BC /* WatchaAssignment */,
-				665C4E2E27CC5B0A0014C9BC /* WatchaAssignmentTests */,
-				665C4E3827CC5B0A0014C9BC /* WatchaAssignmentUITests */,
+				665C4E1727CC5B090014C9BC /* GiphySearchClone */,
+				665C4E2E27CC5B0A0014C9BC /* GiphySearchCloneTests */,
+				665C4E3827CC5B0A0014C9BC /* GiphySearchCloneUITests */,
 				665C4E1627CC5B090014C9BC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,14 +131,14 @@
 		665C4E1627CC5B090014C9BC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				665C4E1527CC5B090014C9BC /* WatchaAssignment.app */,
-				665C4E2B27CC5B0A0014C9BC /* WatchaAssignmentTests.xctest */,
-				665C4E3527CC5B0A0014C9BC /* WatchaAssignmentUITests.xctest */,
+				665C4E1527CC5B090014C9BC /* GiphySearchClone.app */,
+				665C4E2B27CC5B0A0014C9BC /* GiphySearchCloneTests.xctest */,
+				665C4E3527CC5B0A0014C9BC /* GiphySearchCloneUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		665C4E1727CC5B090014C9BC /* WatchaAssignment */ = {
+		665C4E1727CC5B090014C9BC /* GiphySearchClone */ = {
 			isa = PBXGroup;
 			children = (
 				57D215F827CF1036007C1A03 /* Util */,
@@ -154,24 +154,24 @@
 				665C4E2627CC5B0A0014C9BC /* Info.plist */,
 				665C4E7227CE42250014C9BC /* Model.xcdatamodeld */,
 			);
-			path = WatchaAssignment;
+			path = GiphySearchClone;
 			sourceTree = "<group>";
 		};
-		665C4E2E27CC5B0A0014C9BC /* WatchaAssignmentTests */ = {
+		665C4E2E27CC5B0A0014C9BC /* GiphySearchCloneTests */ = {
 			isa = PBXGroup;
 			children = (
 				665C4E2F27CC5B0A0014C9BC /* WatchaAssignmentTests.swift */,
 			);
-			path = WatchaAssignmentTests;
+			path = GiphySearchCloneTests;
 			sourceTree = "<group>";
 		};
-		665C4E3827CC5B0A0014C9BC /* WatchaAssignmentUITests */ = {
+		665C4E3827CC5B0A0014C9BC /* GiphySearchCloneUITests */ = {
 			isa = PBXGroup;
 			children = (
 				665C4E3927CC5B0A0014C9BC /* WatchaAssignmentUITests.swift */,
 				665C4E3B27CC5B0A0014C9BC /* WatchaAssignmentUITestsLaunchTests.swift */,
 			);
-			path = WatchaAssignmentUITests;
+			path = GiphySearchCloneUITests;
 			sourceTree = "<group>";
 		};
 		665C4E4B27CC79FC0014C9BC /* Network */ = {
@@ -260,9 +260,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		665C4E1427CC5B080014C9BC /* WatchaAssignment */ = {
+		665C4E1427CC5B080014C9BC /* GiphySearchClone */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 665C4E3F27CC5B0A0014C9BC /* Build configuration list for PBXNativeTarget "WatchaAssignment" */;
+			buildConfigurationList = 665C4E3F27CC5B0A0014C9BC /* Build configuration list for PBXNativeTarget "GiphySearchClone" */;
 			buildPhases = (
 				665C4E1127CC5B080014C9BC /* Sources */,
 				665C4E1227CC5B080014C9BC /* Frameworks */,
@@ -272,17 +272,17 @@
 			);
 			dependencies = (
 			);
-			name = WatchaAssignment;
+			name = GiphySearchClone;
 			packageProductDependencies = (
 				665C4E4927CC61900014C9BC /* Alamofire */,
 			);
 			productName = WatchaAssignment;
-			productReference = 665C4E1527CC5B090014C9BC /* WatchaAssignment.app */;
+			productReference = 665C4E1527CC5B090014C9BC /* GiphySearchClone.app */;
 			productType = "com.apple.product-type.application";
 		};
-		665C4E2A27CC5B0A0014C9BC /* WatchaAssignmentTests */ = {
+		665C4E2A27CC5B0A0014C9BC /* GiphySearchCloneTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 665C4E4227CC5B0A0014C9BC /* Build configuration list for PBXNativeTarget "WatchaAssignmentTests" */;
+			buildConfigurationList = 665C4E4227CC5B0A0014C9BC /* Build configuration list for PBXNativeTarget "GiphySearchCloneTests" */;
 			buildPhases = (
 				665C4E2727CC5B0A0014C9BC /* Sources */,
 				665C4E2827CC5B0A0014C9BC /* Frameworks */,
@@ -293,14 +293,14 @@
 			dependencies = (
 				665C4E2D27CC5B0A0014C9BC /* PBXTargetDependency */,
 			);
-			name = WatchaAssignmentTests;
+			name = GiphySearchCloneTests;
 			productName = WatchaAssignmentTests;
-			productReference = 665C4E2B27CC5B0A0014C9BC /* WatchaAssignmentTests.xctest */;
+			productReference = 665C4E2B27CC5B0A0014C9BC /* GiphySearchCloneTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		665C4E3427CC5B0A0014C9BC /* WatchaAssignmentUITests */ = {
+		665C4E3427CC5B0A0014C9BC /* GiphySearchCloneUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 665C4E4527CC5B0A0014C9BC /* Build configuration list for PBXNativeTarget "WatchaAssignmentUITests" */;
+			buildConfigurationList = 665C4E4527CC5B0A0014C9BC /* Build configuration list for PBXNativeTarget "GiphySearchCloneUITests" */;
 			buildPhases = (
 				665C4E3127CC5B0A0014C9BC /* Sources */,
 				665C4E3227CC5B0A0014C9BC /* Frameworks */,
@@ -311,9 +311,9 @@
 			dependencies = (
 				665C4E3727CC5B0A0014C9BC /* PBXTargetDependency */,
 			);
-			name = WatchaAssignmentUITests;
+			name = GiphySearchCloneUITests;
 			productName = WatchaAssignmentUITests;
-			productReference = 665C4E3527CC5B0A0014C9BC /* WatchaAssignmentUITests.xctest */;
+			productReference = 665C4E3527CC5B0A0014C9BC /* GiphySearchCloneUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -339,7 +339,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 665C4E1027CC5B080014C9BC /* Build configuration list for PBXProject "WatchaAssignment" */;
+			buildConfigurationList = 665C4E1027CC5B080014C9BC /* Build configuration list for PBXProject "GiphySearchClone" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -355,9 +355,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				665C4E1427CC5B080014C9BC /* WatchaAssignment */,
-				665C4E2A27CC5B0A0014C9BC /* WatchaAssignmentTests */,
-				665C4E3427CC5B0A0014C9BC /* WatchaAssignmentUITests */,
+				665C4E1427CC5B080014C9BC /* GiphySearchClone */,
+				665C4E2A27CC5B0A0014C9BC /* GiphySearchCloneTests */,
+				665C4E3427CC5B0A0014C9BC /* GiphySearchCloneUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -438,12 +438,12 @@
 /* Begin PBXTargetDependency section */
 		665C4E2D27CC5B0A0014C9BC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 665C4E1427CC5B080014C9BC /* WatchaAssignment */;
+			target = 665C4E1427CC5B080014C9BC /* GiphySearchClone */;
 			targetProxy = 665C4E2C27CC5B0A0014C9BC /* PBXContainerItemProxy */;
 		};
 		665C4E3727CC5B0A0014C9BC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 665C4E1427CC5B080014C9BC /* WatchaAssignment */;
+			target = 665C4E1427CC5B080014C9BC /* GiphySearchClone */;
 			targetProxy = 665C4E3627CC5B0A0014C9BC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -585,7 +585,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DGUC4ZZN2Q;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WatchaAssignment/Info.plist;
+				INFOPLIST_FILE = GiphySearchClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -596,7 +596,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.injun.WatchaAssignment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.injun.GiphySearchClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -613,7 +613,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DGUC4ZZN2Q;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WatchaAssignment/Info.plist;
+				INFOPLIST_FILE = GiphySearchClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -624,7 +624,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.injun.WatchaAssignment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.injun.GiphySearchClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -648,7 +648,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchaAssignment.app/WatchaAssignment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GiphySearchClone.app/GiphySearchClone";
 			};
 			name = Debug;
 		};
@@ -668,7 +668,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchaAssignment.app/WatchaAssignment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GiphySearchClone.app/GiphySearchClone";
 			};
 			name = Release;
 		};
@@ -711,7 +711,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		665C4E1027CC5B080014C9BC /* Build configuration list for PBXProject "WatchaAssignment" */ = {
+		665C4E1027CC5B080014C9BC /* Build configuration list for PBXProject "GiphySearchClone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				665C4E3D27CC5B0A0014C9BC /* Debug */,
@@ -720,7 +720,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		665C4E3F27CC5B0A0014C9BC /* Build configuration list for PBXNativeTarget "WatchaAssignment" */ = {
+		665C4E3F27CC5B0A0014C9BC /* Build configuration list for PBXNativeTarget "GiphySearchClone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				665C4E4027CC5B0A0014C9BC /* Debug */,
@@ -729,7 +729,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		665C4E4227CC5B0A0014C9BC /* Build configuration list for PBXNativeTarget "WatchaAssignmentTests" */ = {
+		665C4E4227CC5B0A0014C9BC /* Build configuration list for PBXNativeTarget "GiphySearchCloneTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				665C4E4327CC5B0A0014C9BC /* Debug */,
@@ -738,7 +738,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		665C4E4527CC5B0A0014C9BC /* Build configuration list for PBXNativeTarget "WatchaAssignmentUITests" */ = {
+		665C4E4527CC5B0A0014C9BC /* Build configuration list for PBXNativeTarget "GiphySearchCloneUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				665C4E4627CC5B0A0014C9BC /* Debug */,

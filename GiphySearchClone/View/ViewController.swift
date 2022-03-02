@@ -143,7 +143,7 @@ extension ViewController: UICollectionViewDataSource,
 extension ViewController: SearchResultLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForImageAtIndexPath indexPath: IndexPath, cellWidth: CGFloat) -> CGFloat {
         let image = viewModel.searchReslt[indexPath.row].images.fixedWidth
-        let height = HeightCalculate.calculateImageHeight(image: image, width: collectionView.bounds.width / 2)
+        let height = HeightCalculate.calculateImageHeight(image: image, width: cellWidth)
         return height
     }
 }
