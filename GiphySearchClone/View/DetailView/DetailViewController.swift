@@ -1,6 +1,5 @@
 //
 //  DetailViewController.swift
-//  WatchaAssignment
 //
 //  Created by 옥인준 on 2022/03/01.
 //
@@ -68,6 +67,7 @@ class DetailViewController: UIViewController {
     }
     
     private func setImage() {
+        
         imageView.image = UIImage.gifImageFromURL(detailData.images.previewGif.url)
     }
     

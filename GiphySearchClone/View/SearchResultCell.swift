@@ -1,6 +1,5 @@
 //
 //  SearchResultCell.swift
-//  WatchaAssignment
 //
 //  Created by 옥인준 on 2022/03/01.
 //
